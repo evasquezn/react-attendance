@@ -1,0 +1,9 @@
+global:
+  team: edgelms
+  name: edgelms-react-attendance-report
+  type: static_website
+
+static_website:
+  local_dir: dist
+  hosts:
+    - subdomain: attendance-report

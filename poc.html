@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <link rel="apple-touch-icon" sizes="180x180" href="/static/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/static/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/static/favicon-16x16.png">
+        <link rel="manifest" href="/static/site.webmanifest"></head>
+    <body>
+        <div class="wrapper"></div>
+        <script src="index.js"></script>
+        <script>
+            function errorHandler(err) {
+                console.log("Error: ", err);
+                alert(err);
+            }
+
+            var config = {
+                selector: ".wrapper",
+                attendanceReportAPIBaseUrl: "https://local.edgenuity.com/LMASPI/",
+                studentAPIBaseUrl: "https://local.edgenuity.com/LMASPI/",
+                reportTitle: "Attendance Log For: Example Middle School",
+                defaultPageSize: 8,
+                defaultDate: "04/04/2021",
+                onError: errorHandler
+            };
+
+            var sar = new EdgenuityContentTools.StudentAttendanceReport(config);
+            sar.render();
+        </script>
+    </body>
+</html>

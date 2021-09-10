@@ -1,0 +1,17 @@
+// .babelrc
+{
+    "presets": [
+        "@babel/preset-react",
+        "@babel/preset-typescript", 
+        ["@babel/preset-env", { "modules": false }]
+    ],
+    "plugins": [
+        "transform-es2015-modules-commonjs",
+        "@babel/plugin-transform-react-jsx",
+        "@babel/plugin-syntax-jsx",
+        "@babel/plugin-proposal-class-properties"
+    ],
+    "test": [
+        "jest"
+    ]
+}
